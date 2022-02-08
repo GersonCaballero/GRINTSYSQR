@@ -1,5 +1,6 @@
 ﻿using Abp.MultiTenancy;
 using GRINTSYSQR.Authorization.Users;
+using System.ComponentModel.DataAnnotations;
 
 namespace GRINTSYSQR.MultiTenancy
 {
@@ -13,5 +14,23 @@ namespace GRINTSYSQR.MultiTenancy
             : base(tenancyName, name)
         {
         }
+
+        [Required]
+        public string PhoneNumber { get; set; }
+
+        [Required]
+        public string AddressLogo { get; set; }
+
+        [Required]
+        public string AddressStamp { get; set; }
+
+        [Required]
+        public string RTN { get; set; }
+
+        [Required]
+        public string PrincipalAddress { get; set; }
+
+        [Required]
+        public string SecondaryAddress { get; set; }
     }
 }
