@@ -54,6 +54,134 @@
         ></abp-validation-summary>
       </div>
     </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="phoneNumber">
+        {{ "Phone Number" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="phoneNumber"
+          id="phoneNumber"
+          required
+          [(ngModel)]="tenant.phoneNumber"
+          #phoneNumberModel="ngModel"
+          #phoneNumberEl
+        />
+        <abp-validation-summary
+          [control]="phoneNumberModel"
+          [controlEl]="phoneNumberEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="rtn">
+        {{ "RTN" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="rtn"
+          id="rtn"
+          required
+          [(ngModel)]="tenant.rtn"
+          #rtnModel="ngModel"
+          #rtnEl
+        />
+        <abp-validation-summary
+          [control]="rtnModel"
+          [controlEl]="rtnEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="principalAddress">
+        {{ "Principal Address" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="principalAddress"
+          id="principalAddress"
+          required
+          [(ngModel)]="tenant.principalAddress"
+          #principalAddressModel="ngModel"
+          #principalAddressEl
+        />
+        <abp-validation-summary
+          [control]="principalAddressModel"
+          [controlEl]="principalAddressEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="secondaryAddress">
+        {{ "Secondary Address" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="secondaryAddress"
+          id="secondaryAddress"
+          required
+          [(ngModel)]="tenant.secondaryAddress"
+          #secondaryAddressModel="ngModel"
+          #secondaryAddressEl
+        />
+        <abp-validation-summary
+          [control]="secondaryAddressModel"
+          [controlEl]="secondaryAddressEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="addressLogo">
+        {{ "Address Logo" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="addressLogo"
+          id="addressLogo"
+          maxlength="128"
+          required
+          [(ngModel)]="tenant.addressLogo"
+          #addressLogoModel="ngModel"
+          #addressLogoEl
+        />
+        <abp-validation-summary
+          [control]="addressLogoModel"
+          [controlEl]="addressLogoEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="addressStamp">
+        {{ "Address Stamp" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="addressStamp"
+          id="addressStamp"
+          maxlength="128"
+          required
+          [(ngModel)]="tenant.addressStamp"
+          #addressStampModel="ngModel"
+          #addressStampEl
+        />
+        <abp-validation-summary
+          [control]="addressStampModel"
+          [controlEl]="addressStampEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
     <div class="form-group row mb-0">
       <label class="col-md-3 col-form-label">
         {{ "IsActive" | localize }}

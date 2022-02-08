@@ -1,0 +1,70 @@
+<form class="form-horizontal" autocomplete="off" #createPatientForm="ngForm" (ngSubmit)="save()">
+    <abp-modal-header [title]="'CreateNewPatient' | localize" (onCloseClick)="bsModalRef.hide()"></abp-modal-header>
+    <div class="modal-body">
+        <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="name">
+                {{ "Name" | localize }}
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="name" id="name" minlength="2" maxlength="64" required
+                    [(ngModel)]="patient.name" #nameModel="ngModel" #nameEl />
+                <abp-validation-summary [control]="nameModel" [controlEl]="nameEl"></abp-validation-summary>
+            </div>
+        </div>
+        <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="dni">
+                {{ "DNI" | localize }}
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="dni" id="dni" maxlength="128" required
+                    [(ngModel)]="patient.dni" #dniModel="ngModel" #dniEl />
+                <abp-validation-summary [control]="dniModel" [controlEl]="dniEl"></abp-validation-summary>
+            </div>
+        </div>
+        <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="birthdate">{{ "Birthdate" | localize }}</label>
+            <div class="col-md-9">
+                <input name="birthdate" [(ngModel)]="patient.birthdate" type="date" class="form-control" required
+                    #birthdateModel="ngModel" #birthdateEl>
+                <abp-validation-summary [control]="birthdateModel" [controlEl]="birthdateEl">
+                </abp-validation-summary>
+            </div>
+        </div>
+        <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="phoneNumber">
+                {{ "PhoneNumber" | localize }}
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" required
+                    [(ngModel)]="patient.phoneNumber" #phoneNumberModel="ngModel" #phoneNumberEl />
+                <abp-validation-summary [control]="phoneNumberModel" [controlEl]="phoneNumberEl">
+                </abp-validation-summary>
+            </div>
+        </div>
+        <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="email">
+                {{ "Email" | localize }}
+            </label>
+            <div class="col-md-9">
+                <input type="email" class="form-control" name="email" id="email"
+                    pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,})+$" maxlength="256" required
+                    [(ngModel)]="patient.email" #emailModel="ngModel" #emailEl />
+                <abp-validation-summary [control]="emailModel" [controlEl]="emailEl"></abp-validation-summary>
+            </div>
+        </div>
+        <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="gender">{{ "Gender" | localize }}</label>
+            <div class="input-group col-md-9">
+                <select name="gender" class="custom-select" required [(ngModel)]="patient.gender" id="Select-Gebder"
+                    #genderModel="ngModel" #genderEl>
+                    <abp-validation-summary [control]="genderModel" [controlEl]="genderEl">
+                    </abp-validation-summary>
+                    <option>{{ "Male" | localize }}</option>
+                    <option>{{ "Female" | localize }}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <abp-modal-footer [cancelDisabled]="saving" [saveDisabled]="!createPatientForm.form.valid || saving"
+        (onCancelClick)="bsModalRef.hide()"></abp-modal-footer>
+</form>

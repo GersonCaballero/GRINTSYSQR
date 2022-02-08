@@ -24,6 +24,24 @@ namespace GRINTSYSQR.MultiTenancy.Dto
         [StringLength(AbpTenantBase.MaxConnectionStringLength)]
         public string ConnectionString { get; set; }
 
+        [Required]
+        public string PhoneNumber { get; set; }
+
+        [Required]
+        public string AddressLogo { get; set; }
+
+        [Required]
+        public string AddressStamp { get; set; }
+
+        [Required]
+        public string RTN { get; set; }
+
+        [Required]
+        public string PrincipalAddress { get; set; }
+
+        [Required]
+        public string SecondaryAddress { get; set; }
+
         public bool IsActive {get; set;}
     }
 }
