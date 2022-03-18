@@ -41,6 +41,18 @@ import { SidebarMenuComponent } from './layout/sidebar-menu.component';
 import { PatientsComponent } from './patients/list-patient/patients/patients.component';
 import { CreatePatientDialogComponent } from './patients/create-patient/create-patient-dialog/create-patient-dialog.component';
 import { EditPatientDialogComponent } from './patients/edit-patient/edit-patient-dialog/edit-patient-dialog.component';
+import { ListDoctorComponent } from './doctors/list-doctor/list-doctor.component';
+import { CreateDoctorComponent } from './doctors/create-doctor/create-doctor.component';
+import { EditDoctorComponent } from './doctors/edit-doctor/edit-doctor.component';
+import { ListExamComponent } from './exams/list-exam/list-exam.component';
+import { CreateExamComponent } from './exams/create-exam/create-exam.component';
+import { EditExamComponent } from './exams/edit-exam/edit-exam.component';
+import { ListResultComponent } from './results/list-result/list-result.component';
+import { CreateResultComponent } from './results/create-result/create-result.component';
+import { EditResultComponent } from './results/edit-result/edit-result.component';
+import { ListTechniqueComponent } from './techniques/list-technique/list-technique.component';
+import { EditTechniqueComponent } from './techniques/edit-technique/edit-technique.component';
+import { CreateTechniqueComponent } from './techniques/create-technique/create-technique.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +85,19 @@ import { EditPatientDialogComponent } from './patients/edit-patient/edit-patient
     SidebarMenuComponent,
     PatientsComponent,
     CreatePatientDialogComponent,
-    EditPatientDialogComponent
+    EditPatientDialogComponent,
+    ListDoctorComponent,
+    CreateDoctorComponent,
+    EditDoctorComponent,
+    ListExamComponent,
+    CreateExamComponent,
+    EditExamComponent,
+    ListResultComponent,
+    CreateResultComponent,
+    EditResultComponent,
+    ListTechniqueComponent,
+    EditTechniqueComponent,
+    CreateTechniqueComponent
   ],
   imports: [
     CommonModule,

@@ -9,6 +9,10 @@ import { TenantsComponent } from './tenants/tenants.component';
 import { RolesComponent } from 'app/roles/roles.component';
 import { ChangePasswordComponent } from './users/change-password/change-password.component';
 import { PatientsComponent } from './patients/list-patient/patients/patients.component';
+import { ListDoctorComponent } from './doctors/list-doctor/list-doctor.component';
+import { ListExamComponent } from './exams/list-exam/list-exam.component';
+import { ListResultComponent } from './results/list-result/list-result.component';
+import { ListTechniqueComponent } from './techniques/list-technique/list-technique.component';
 
 @NgModule({
     imports: [
@@ -24,6 +28,10 @@ import { PatientsComponent } from './patients/list-patient/patients/patients.com
                     { path: 'about', component: AboutComponent, canActivate: [AppRouteGuard] },
                     { path: 'update-password', component: ChangePasswordComponent, canActivate: [AppRouteGuard] },
                     { path: 'patients', component: PatientsComponent },
+                    { path: 'doctors', component: ListDoctorComponent },
+                    { path: 'exams', component: ListExamComponent },
+                    { path: 'results', component: ListResultComponent },
+                    { path: 'techniques', component: ListTechniqueComponent },
                 ]
             }
         ])
