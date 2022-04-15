@@ -8,6 +8,8 @@ using GRINTSYSQR.Features.Exams;
 using GRINTSYSQR.Features.Doctors;
 using GRINTSYSQR.Features.Results;
 using GRINTSYSQR.Features.Techniques;
+using GRINTSYSQR.Features.Tests;
+using GRINTSYSQR.Features.Details;
 
 namespace GRINTSYSQR.EntityFrameworkCore
 {
@@ -19,6 +21,8 @@ namespace GRINTSYSQR.EntityFrameworkCore
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Result> Results { get; set; }
         public DbSet<technique> Techniques { get; set; }
+        public DbSet<Test> Tests { get; set; }
+        public DbSet<Detail> Details { get; set; }
         public GRINTSYSQRDbContext(DbContextOptions<GRINTSYSQRDbContext> options)
             : base(options)
         {
